@@ -3,7 +3,7 @@
 JTCard Platform - Professional Digital Business Cards
 Render Deployment Version with PostgreSQL
 """
-
+import sqlite3
 import os
 import hashlib
 import secrets
@@ -15,6 +15,7 @@ import qrcode
 from io import BytesIO
 import base64
 from dotenv import load_dotenv
+
 
 # Load environment variables
 load_dotenv()
