@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - JTCard</title>
+    <meta name="description" content="Learn about JTCard's mission to revolutionize professional networking with digital business cards.">
+    
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="{{ url_for('index') }}" class="logo">
+                    <div class="logo-icon">JT</div>
+                    JTCard
+                </a>
+                
+                <nav class="nav">
+                    <ul class="nav-links">
+                        <li><a href="{{ url_for('index') }}" class="nav-link">Home</a></li>
+                        <li><a href="{{ url_for('about') }}" class="nav-link active">About</a></li>
+                        <li><a href="{{ url_for('why_choose_us') }}" class="nav-link">Why Choose Us</a></li>
+                        <li><a href="{{ url_for('templates') }}" class="nav-link">Templates</a></li>
+                        <li><a href="{{ url_for('pricing') }}" class="nav-link">Pricing</a></li>
+                        <li><a href="{{ url_for('contact') }}" class="nav-link">Contact</a></li>
+                    </ul>
+                    
+                    <div class="nav-actions">
+                        <a href="{{ url_for('login') }}" class="btn btn-ghost">Sign In</a>
+                        <a href="{{ url_for('signup') }}" class="btn btn-primary">Get Started</a>
+                    </div>
+                </nav>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span>☰</span>
+                </button>
+            </div>
+            
+            <div class="mobile-menu" id="mobileMenu">
+                <ul class="mobile-nav-links">
+                    <li><a href="{{ url_for('index') }}" class="mobile-nav-link">Home</a></li>
+                    <li><a href="{{ url_for('about') }}" class="mobile-nav-link">About</a></li>
+                    <li><a href="{{ url_for('why_choose_us') }}" class="mobile-nav-link">Why Choose Us</a></li>
+                    <li><a href="{{ url_for('templates') }}" class="mobile-nav-link">Templates</a></li>
+                    <li><a href="{{ url_for('pricing') }}" class="mobile-nav-link">Pricing</a></li>
+                    <li><a href="{{ url_for('contact') }}" class="mobile-nav-link">Contact</a></li>
+                    <li><a href="{{ url_for('login') }}" class="mobile-nav-link">Sign In</a></li>
+                    <li><a href="{{ url_for('signup') }}" class="mobile-nav-link">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="padding: 140px 0 80px;">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <div style="display: inline-block; background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.875rem; font-weight: 600; margin-bottom: 1.5rem;">
+                    🏢 About JTCard
+                </div>
+                <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem; line-height: 1.1;">
+                    Revolutionizing Professional
+                    <span style="background: linear-gradient(135deg, #fbbf24, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Networking</span>
+                </h1>
+                <p style="font-size: 1.25rem; margin-bottom: 3rem; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    We're on a mission to transform how professionals connect, share, and grow their networks in the digital age.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-cols-2" style="align-items: center; gap: 4rem;">
+                <div class="fade-in">
+                    <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem; color: #1e293b;">Our Mission</h2>
+                    <p style="font-size: 1.125rem; color: #64748b; line-height: 1.7; margin-bottom: 2rem;">
+                        At JTCard, we believe that every professional interaction should be meaningful, memorable, and sustainable. 
+                        Traditional business cards are outdated, wasteful, and easily lost. We're changing that.
+                    </p>
+                    <p style="font-size: 1.125rem; color: #64748b; line-height: 1.7; margin-bottom: 2rem;">
+                        Our platform empowers professionals to create stunning digital business cards that not only look 
+                        impressive but also provide valuable insights into networking effectiveness.
+                    </p>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; background: #f0f9ff; color: #0369a1; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.875rem; font-weight: 600;">
+                            🌱 Eco-Friendly
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem; background: #f0fdf4; color: #15803d; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.875rem; font-weight: 600;">
+                            📊 Data-Driven
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem; background: #fef3c7; color: #d97706; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.875rem; font-weight: 600;">
+                            🚀 Innovative
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fade-in" style="text-align: center;">
+                    <div style="background: linear-gradient(135deg, #3b82f6, #8b5cf6); border-radius: 2rem; padding: 3rem; color: white; position: relative; overflow: hidden;">
+                        <div style="position: absolute; top: -50%; right: -50%; width: 200%; height: 200%; background: url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"0.05\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"2\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'); animation: float 20s linear infinite;"></div>
+                        <div style="position: relative; z-index: 1;">
+                            <div style="font-size: 4rem; margin-bottom: 1rem;">🎯</div>
+                            <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Our Vision</h3>
+                            <p style="opacity: 0.9; line-height: 1.6;">
+                                To become the global standard for professional networking, 
+                                making every connection count and every interaction meaningful.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section bg-gray-50">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Impact</h2>
+                <p class="section-subtitle">Numbers that showcase our commitment to excellence and sustainability</p>
+            </div>
+            
+            <div class="grid grid-cols-4">
+                <div class="text-center fade-in">
+                    <div style="font-size: 3.5rem; font-weight: 800; color: #3b82f6; margin-bottom: 0.5rem;">50,000+</div>
+                    <div style="font-size: 1.25rem; font-weight: 600; color: #1e293b; margin-bottom: 0.5rem;">Digital Cards Created</div>
+                    <div style="color: #64748b;">Professionals trust our platform</div>
+                </div>
+                
+                <div class="text-center fade-in">
+                    <div style="font-size: 3.5rem; font-weight: 800; color: #10b981; margin-bottom: 0.5rem;">25,000+</div>
+                    <div style="font-size: 1.25rem; font-weight: 600; color: #1e293b; margin-bottom: 0.5rem;">Active Users</div>
+                    <div style="color: #64748b;">Growing community worldwide</div>
+                </div>
+                
+                <div class="text-center fade-in">
+                    <div style="font-size: 3.5rem; font-weight: 800; color: #f59e0b; margin-bottom: 0.5rem;">500,000+</div>
+                    <div style="font-size: 1.25rem; font-weight: 600; color: #1e293b; margin-bottom: 0.5rem;">Trees Saved</div>
+                    <div style="color: #64748b;">Environmental impact matters</div>
+                </div>
+                
+                <div class="text-center fade-in">
+                    <div style="font-size: 3.5rem; font-weight: 800; color: #8b5cf6; margin-bottom: 0.5rem;">99.8%</div>
+                    <div style="font-size: 1.25rem; font-weight: 600; color: #1e293b; margin-bottom: 0.5rem;">Satisfaction Rate</div>
+                    <div style="color: #64748b;">Loved by our users</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Values</h2>
+                <p class="section-subtitle">The principles that guide everything we do</p>
+            </div>
+            
+            <div class="grid grid-cols-3">
+                <div class="card fade-in">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #3b82f6, #1d4ed8); border-radius: 1rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: white; font-size: 1.5rem;">
+                        🌟
+                    </div>
+                    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: #1e293b;">Excellence</h3>
+                    <p style="color: #64748b; line-height: 1.6;">
+                        We strive for perfection in every detail, from design to functionality, 
+                        ensuring our users always have the best experience possible.
+                    </p>
+                </div>
+                
+                <div class="card fade-in">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #10b981, #059669); border-radius: 1rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: white; font-size: 1.5rem;">
+                        🌍
+                    </div>
+                    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: #1e293b;">Sustainability</h3>
+                    <p style="color: #64748b; line-height: 1.6;">
+                        Environmental responsibility is at our core. Every digital card created 
+                        helps reduce paper waste and contributes to a greener planet.
+                    </p>
+                </div>
+                
+                <div class="card fade-in">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #f59e0b, #d97706); border-radius: 1rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: white; font-size: 1.5rem;">
+                        🚀
+                    </div>
+                    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: #1e293b;">Innovation</h3>
+                    <p style="color: #64748b; line-height: 1.6;">
+                        We continuously push boundaries, embracing new technologies and ideas 
+                        to stay ahead of the curve in professional networking.
+                    </p>
+                </div>
+                
+                <div class="card fade-in">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #8b5cf6, #7c3aed); border-radius: 1rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: white; font-size: 1.5rem;">
+                        🤝
+                    </div>
+                    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: #1e293b;">Connection</h3>
+                    <p style="color: #64748b; line-height: 1.6;">
+                        We believe in the power of human connections and work to make 
+                        every networking opportunity meaningful and impactful.
+                    </p>
+                </div>
+                
+                <div class="card fade-in">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #ef4444, #dc2626); border-radius: 1rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: white; font-size: 1.5rem;">
+                        🔒
+                    </div>
+                    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: #1e293b;">Privacy</h3>
+                    <p style="color: #64748b; line-height: 1.6;">
+                        Your data is sacred to us. We implement the highest security standards 
+                        to protect your information and maintain your trust.
+                    </p>
+                </div>
+                
+                <div class="card fade-in">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #06b6d4, #0891b2); border-radius: 1rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: white; font-size: 1.5rem;">
+                        💡
+                    </div>
+                    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: #1e293b;">Simplicity</h3>
+                    <p style="color: #64748b; line-height: 1.6;">
+                        Complex problems deserve simple solutions. We make professional 
+                        networking effortless and intuitive for everyone.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section bg-gray-50">
+        <div class="container">
+            <div class="text-center fade-in" style="max-width: 600px; margin: 0 auto;">
+                <h2 style="font-size: 3rem; font-weight: 800; margin-bottom: 1.5rem; color: #1e293b;">Ready to Join Our Mission?</h2>
+                <p style="font-size: 1.25rem; color: #64748b; margin-bottom: 3rem; line-height: 1.6;">
+                    Be part of the networking revolution. Create your professional digital business card today and start making connections that matter.
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="{{ url_for('signup') }}" class="btn btn-primary btn-xl">
+                        <span>🚀</span> Get Started Free
+                    </a>
+                    <a href="{{ url_for('contact') }}" class="btn btn-outline btn-xl">
+                        <span>💬</span> Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                        <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #3b82f6, #1d4ed8); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin-right: 0.75rem;">JT</div>
+                        <span style="font-size: 1.25rem; font-weight: bold;">JTCard</span>
+                    </div>
+                    <p style="color: #94a3b8; line-height: 1.6; margin-bottom: 1.5rem;">Create professional digital business cards that make lasting impressions and grow your network.</p>
+                    <div style="display: flex; gap: 1rem;">
+                        <div style="width: 40px; height: 40px; background: #334155; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; cursor: pointer; transition: background 0.2s;">📧</div>
+                        <div style="width: 40px; height: 40px; background: #334155; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; cursor: pointer; transition: background 0.2s;">📱</div>
+                        <div style="width: 40px; height: 40px; background: #334155; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; cursor: pointer; transition: background 0.2s;">🌐</div>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="{{ url_for('templates') }}">Templates</a></li>
+                        <li><a href="{{ url_for('pricing') }}">Pricing</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Integrations</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="{{ url_for('about') }}">About</a></li>
+                        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 JTCard. All rights reserved. Made with ❤️ for professionals worldwide.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

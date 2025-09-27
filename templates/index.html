@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JTCard - Professional Digital Business Cards</title>
+    <meta name="description" content="Create stunning digital business cards that showcase your brand. Share instantly via QR code, track engagement, and never run out of cards again.">
+    
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="{{ url_for('index') }}" class="logo">
+                    <div class="logo-icon">JT</div>
+                    JTCard
+                </a>
+                
+                <nav class="nav">
+                    <ul class="nav-links">
+                        <li><a href="{{ url_for('index') }}" class="nav-link active">Home</a></li>
+                        <li><a href="{{ url_for('about') }}" class="nav-link">About</a></li>
+                        <li><a href="{{ url_for('why_choose_us') }}" class="nav-link">Why Choose Us</a></li>
+                        <li><a href="{{ url_for('templates') }}" class="nav-link">Templates</a></li>
+                        <li><a href="{{ url_for('pricing') }}" class="nav-link">Pricing</a></li>
+                        <li><a href="{{ url_for('contact') }}" class="nav-link">Contact</a></li>
+                    </ul>
+                    
+                    <div class="nav-actions">
+                        <a href="{{ url_for('login') }}" class="btn btn-ghost">Sign In</a>
+                        <a href="{{ url_for('signup') }}" class="btn btn-primary">Get Started</a>
+                    </div>
+                </nav>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span>☰</span>
+                </button>
+            </div>
+            
+            <div class="mobile-menu" id="mobileMenu">
+                <ul class="mobile-nav-links">
+                    <li><a href="{{ url_for('index') }}" class="mobile-nav-link">Home</a></li>
+                    <li><a href="{{ url_for('about') }}" class="mobile-nav-link">About</a></li>
+                    <li><a href="{{ url_for('why_choose_us') }}" class="mobile-nav-link">Why Choose Us</a></li>
+                    <li><a href="{{ url_for('templates') }}" class="mobile-nav-link">Templates</a></li>
+                    <li><a href="{{ url_for('pricing') }}" class="mobile-nav-link">Pricing</a></li>
+                    <li><a href="{{ url_for('contact') }}" class="mobile-nav-link">Contact</a></li>
+                    <li><a href="{{ url_for('login') }}" class="mobile-nav-link">Sign In</a></li>
+                    <li><a href="{{ url_for('signup') }}" class="mobile-nav-link">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <div class="stats" style="margin-bottom: 2rem; opacity: 0.9;">
+                    <div class="stat-item">
+                        <span class="stat-number">50K+</span>
+                        <span class="stat-label">Cards Created</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">25K+</span>
+                        <span class="stat-label">Happy Users</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">99.8%</span>
+                        <span class="stat-label">Satisfaction</span>
+                    </div>
+                </div>
+                
+                <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem; line-height: 1.1;">
+                    Create Professional Digital<br>
+                    <span style="background: linear-gradient(135deg, #fbbf24, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Business Cards</span> in Minutes
+                </h1>
+                
+                <p style="font-size: 1.25rem; margin-bottom: 3rem; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Stand out with stunning digital business cards that showcase your brand. Share instantly via QR code, track engagement, and never run out of cards again.
+                </p>
+                
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 4rem;">
+                    <a href="{{ url_for('signup') }}" class="btn btn-secondary btn-xl">
+                        <span>🚀</span> Start Creating Free
+                    </a>
+                    <a href="{{ url_for('templates') }}" class="btn btn-outline btn-xl" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.3); color: white;">
+                        <span>👁️</span> View Templates
+                    </a>
+                </div>
+                
+                <!-- Business Card Preview -->
+                <div style="max-width: 400px; margin: 0 auto; background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); transform: perspective(1000px) rotateX(5deg) rotateY(-5deg);">
+                    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #3b82f6, #1d4ed8); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.5rem; margin-right: 1rem;">
+                            JD
+                        </div>
+                        <div>
+                            <h3 style="color: #1e293b; margin: 0; font-size: 1.5rem;">John Doe</h3>
+                            <p style="color: #64748b; margin: 0; font-size: 1rem;">Senior Developer</p>
+                        </div>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem; font-size: 0.875rem; color: #64748b;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <span>📧</span> john@company.com
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <span>📱</span> +1 (555) 123-4567
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <span>🌐</span> www.johndoe.com
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <span>📍</span> San Francisco, CA
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; gap: 1rem; margin-top: 1.5rem; justify-content: center;">
+                        <div style="width: 32px; height: 32px; background: #0077b5; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.875rem;">in</div>
+                        <div style="width: 32px; height: 32px; background: #1da1f2; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.875rem;">tw</div>
+                        <div style="width: 32px; height: 32px; background: #333; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.875rem;">gh</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section bg-gray-50">
+        <div class="container">
+            <div class="section-header">
+                <div style="display: inline-block; background: linear-gradient(135deg, #3b82f6, #8b5cf6); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem;">
+                    ⚡ Features
+                </div>
+                <h2 class="section-title">Everything You Need for Professional Networking</h2>
+                <p class="section-subtitle">Powerful features to help you make lasting connections and grow your business with modern digital solutions.</p>
+            </div>
+            
+            <div class="grid grid-cols-3">
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="feature-title">Mobile Optimized</h3>
+                    <p class="feature-description">Perfect viewing experience on all devices. Your cards look stunning on phones, tablets, and desktops with responsive design.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">QR Code Sharing</h3>
+                    <p class="feature-description">Instantly share your card with a QR code. No apps required - works with any smartphone camera for seamless networking.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3 class="feature-title">Analytics & Insights</h3>
+                    <p class="feature-description">Track views, clicks, and engagement. Know when and how people interact with your card to optimize your networking strategy.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔗</div>
+                    <h3 class="feature-title">Social Integration</h3>
+                    <p class="feature-description">Connect all your social profiles. LinkedIn, Twitter, Instagram, and more in one place for comprehensive professional presence.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3 class="feature-title">Custom Templates</h3>
+                    <p class="feature-description">Choose from professional templates or create your own. Match your brand perfectly with customizable colors, fonts, and layouts.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">☁️</div>
+                    <h3 class="feature-title">Cloud Storage</h3>
+                    <p class="feature-description">Your cards are safely stored in the cloud. Access and update them from anywhere with automatic synchronization across devices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-cols-4">
+                <div class="text-center">
+                    <div style="font-size: 3rem; font-weight: 800; color: #3b82f6; margin-bottom: 0.5rem;">50,000+</div>
+                    <div style="font-size: 1.125rem; font-weight: 600; color: #1e293b; margin-bottom: 0.25rem;">Digital Cards Created</div>
+                    <div style="color: #64748b;">Trusted by professionals worldwide</div>
+                </div>
+                
+                <div class="text-center">
+                    <div style="font-size: 3rem; font-weight: 800; color: #10b981; margin-bottom: 0.5rem;">25,000+</div>
+                    <div style="font-size: 1.125rem; font-weight: 600; color: #1e293b; margin-bottom: 0.25rem;">Active Users</div>
+                    <div style="color: #64748b;">Growing community of networkers</div>
+                </div>
+                
+                <div class="text-center">
+                    <div style="font-size: 3rem; font-weight: 800; color: #f59e0b; margin-bottom: 0.5rem;">500,000+</div>
+                    <div style="font-size: 1.125rem; font-weight: 600; color: #1e293b; margin-bottom: 0.25rem;">Trees Saved</div>
+                    <div style="color: #64748b;">Environmental impact matters</div>
+                </div>
+                
+                <div class="text-center">
+                    <div style="font-size: 3rem; font-weight: 800; color: #8b5cf6; margin-bottom: 0.5rem;">99.8%</div>
+                    <div style="font-size: 1.125rem; font-weight: 600; color: #1e293b; margin-bottom: 0.25rem;">Satisfaction Rate</div>
+                    <div style="color: #64748b;">Loved by our users</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section bg-gray-50">
+        <div class="container">
+            <div class="section-header">
+                <div style="display: inline-block; background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem;">
+                    🚀 How It Works
+                </div>
+                <h2 class="section-title">Get Started in 3 Simple Steps</h2>
+                <p class="section-subtitle">Creating your professional digital business card has never been easier. Follow these simple steps to get started.</p>
+            </div>
+            
+            <div class="grid grid-cols-3">
+                <div class="text-center">
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #3b82f6, #1d4ed8); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem; color: white; font-size: 2rem; font-weight: bold;">1</div>
+                    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: #1e293b;">Create Account</h3>
+                    <p style="color: #64748b; line-height: 1.6;">Sign up for free and choose your preferred template from our professional collection.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #10b981, #059669); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem; color: white; font-size: 2rem; font-weight: bold;">2</div>
+                    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: #1e293b;">Customize Design</h3>
+                    <p style="color: #64748b; line-height: 1.6;">Add your information, upload photos, and customize colors to match your brand identity.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #f59e0b, #d97706); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem; color: white; font-size: 2rem; font-weight: bold;">3</div>
+                    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: #1e293b;">Share & Connect</h3>
+                    <p style="color: #64748b; line-height: 1.6;">Share your card via QR code, link, or social media and start building meaningful connections.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center" style="max-width: 600px; margin: 0 auto;">
+                <h2 style="font-size: 3rem; font-weight: 800; margin-bottom: 1.5rem; color: #1e293b;">Ready to Transform Your Networking?</h2>
+                <p style="font-size: 1.25rem; color: #64748b; margin-bottom: 3rem; line-height: 1.6;">Join thousands of professionals who've upgraded to digital business cards and experience the future of networking today.</p>
+                <a href="{{ url_for('signup') }}" class="btn btn-primary btn-xl" style="font-size: 1.25rem; padding: 1.25rem 3rem;">
+                    <span>🎯</span> Get Started Free
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                        <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #3b82f6, #1d4ed8); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin-right: 0.75rem;">JT</div>
+                        <span style="font-size: 1.25rem; font-weight: bold;">JTCard</span>
+                    </div>
+                    <p style="color: #94a3b8; line-height: 1.6; margin-bottom: 1.5rem;">Create professional digital business cards that make lasting impressions and grow your network.</p>
+                    <div style="display: flex; gap: 1rem;">
+                        <div style="width: 40px; height: 40px; background: #334155; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; cursor: pointer; transition: background 0.2s;">📧</div>
+                        <div style="width: 40px; height: 40px; background: #334155; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; cursor: pointer; transition: background 0.2s;">📱</div>
+                        <div style="width: 40px; height: 40px; background: #334155; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; cursor: pointer; transition: background 0.2s;">🌐</div>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="{{ url_for('templates') }}">Templates</a></li>
+                        <li><a href="{{ url_for('pricing') }}">Pricing</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Integrations</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="{{ url_for('about') }}">About</a></li>
+                        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 JTCard. All rights reserved. Made with ❤️ for professionals worldwide.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
